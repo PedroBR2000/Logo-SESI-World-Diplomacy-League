@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --verde-e: #14424b;
+    --verde: #2f9364;
+    --laranja: #39f83c;
+    --gradient: linear-gradient(#fe9611, #ff5c00);
+    --p: #a1a1a1;
+    --p-2: #868585;
+
+}
+
+.background-1{
+    background: var(--verde-e);
+}
+
+.container{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section,
+footer{
+    padding: 2.7rem 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20 0px;
+}
+.logo a{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.ul{
+    display: flex;
+    align-items: center;
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+.ul li a{
+    color: white;
+}
+
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.main-texto{
+    width: 50%;
+    color: white;
+}
+.main-texto h1{
+    font-size: 4.5rem;
+}
+.main-texto div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.Logo-SESI-World-Diplomacy-League{
+    width: 50%;
+}
+.Logo-SESI-World-Diplomacy-League img{
+    width: 90%;
+}
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+.textos{
+    background: var(--laranja);
+}
+
+.textos .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textos .text1{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.textos .text2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.textos .text2 p{
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.textos .text2 p span{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.curiosidades .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.curiosidades .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.curiosidades .card:hover{
+    box-shadow: 0px 10px 67px 8px #e6e6fa85;
+}
+
+.curiosidades .card img{
+    width: 60px;
+}
+
+.curiosidades .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+.foto .container{
+    display: flex;
+    align-items: center;
+}
+
+.foto .grupo.img{
+    width: 50%;
+}
+
+.foto .grupo.img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.foto .foto-text{
+    width: 50%;
+    padding-left: 90px;
+}
+
+.foto .foto-text h2{
+    font-size: 2.5em;
+}
+
+.foto .foto-text p{
+    margin: 20px 0;
+    color: var(--p);
+}
+
+.foto .foto-text p b{
+    color: black;
+    font-size: 25px;
+}
+
+
+@media (max-width: 960px){
+    .menu-icon{
+        display: block;
+    }
+    .ul{
+        position: fixed;
+        background: var(--verde-e);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ul li {
+        font-size: 30px;
+        margin: 40 0px;
+    }
+    .ul.ativo{
+        left: 0%;
+    }
+    main .container{
+        flex-direction: column;
+    }
+    main .container .Logo-SESI-World-Diplomacy-League{
+        width: 100%; 
+    }
+    main .container .main-texto{
+        width: 100%;
+        align-content: center;
+    }
+    .textos .container{
+        flex-direction: column;
+    }
+    .textos .text1,
+    .textos .text2{
+        width: 100%;
+        text-align: center;
+    }
+    .text2{
+        margin-top: 30px;
+    }
+    .curiosidades .container{
+        flex-direction: column;
+    }
+    .curiosidades .card{
+        width: 100%;
+    }
+    .foto .container{
+        flex-direction: column-reverse;
+    }
+    .foto .foto-text,
+    .foto .grupo.img{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:495px){
+    .textos .text2{
+        flex-direction: column;
+    }
+    main .container .main-texto h1{
+        font-size: 3rem;
+    }
+}
